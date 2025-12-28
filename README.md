@@ -36,10 +36,9 @@ cd cli-expense-tracker
 3. Run the program:
 python main.py
 
----
-
 ## 📂 Project Structure
 
+```
 cli-expense-tracker/
 │
 ├── expense.py
@@ -48,8 +47,7 @@ cli-expense-tracker/
 ├── .gitignore
 ├── README.md
 └── LICENSE
-
----
+```
 
 ## 🎯 Example
 
