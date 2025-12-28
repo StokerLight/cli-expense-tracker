@@ -12,7 +12,7 @@ def load_expenses():
     global expenses
     try:
         with open("data.json", "r") as f :
-            data = json.load(f)
+            data = json.dump(data, f, indent=4)
             for item in data:
                 e = Expense(item["title"], item["amount"], item["category"])
                 e.date = item.get("date", e.date)
@@ -111,7 +111,7 @@ def delete_expense():
         if delete_choice < 1 or delete_choice > len(expenses):
             print(f"Expense {delete_choice} is not found")
             continue
-        user_permission = input(f"Are you sure to delete expense number {delete_choice} ?(y/n) ")
+        user_permission = input(f"Are you sure to delete expense number {delete_choice} ?(y/n) ").lower()
         if user_permission == "n":
             break
         if user_permission == "y":
